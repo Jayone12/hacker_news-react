@@ -2,7 +2,7 @@ import TodayJob from "../../components/home/TodayJob";
 import useHomeDataFetch from "../../hooks/useHomeDataFetch";
 
 const TodayJobContainer = () => {
-  const { isLoading, stories } = useHomeDataFetch("job", 5);
+  const { isLoading, stories } = useHomeDataFetch("job", 0, 5);
 
   return (
     <div>

@@ -2,7 +2,7 @@ import TodayTop from "../../components/home/TodayTop";
 import useHomeDataFetch from "../../hooks/useHomeDataFetch";
 
 const TodayTopContainer = () => {
-  const { isLoading, stories } = useHomeDataFetch("top", 15);
+  const { isLoading, stories } = useHomeDataFetch("top", 0, 15);
 
   return (
     <div>

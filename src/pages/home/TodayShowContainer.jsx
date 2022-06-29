@@ -2,7 +2,7 @@ import TodayShow from "../../components/home/TodayShow";
 import useHomeDataFetch from "../../hooks/useHomeDataFetch";
 
 const TodayShowContainer = () => {
-  const { isLoading, stories } = useHomeDataFetch("show", 5);
+  const { isLoading, stories } = useHomeDataFetch("show", 0, 5);
 
   return (
     <div>

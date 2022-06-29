@@ -23,7 +23,7 @@ const TodayShow = ({ value: { url, title, score, time, by, kids } }) => {
         <hr />
         <div>
           <img src="/images/comment_icon.png" alt="comment icon" />
-          <span>{kids.length}</span>
+          <span>{kids?.length}</span>
         </div>
       </div>
     </li>

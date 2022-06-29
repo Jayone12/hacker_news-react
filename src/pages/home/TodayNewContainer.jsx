@@ -2,7 +2,7 @@ import TodayNew from "../../components/home/TodayNew";
 import useHomeDataFetch from "../../hooks/useHomeDataFetch";
 
 const TodayNewContainer = () => {
-  const { isLoading, stories } = useHomeDataFetch("new", 4);
+  const { isLoading, stories } = useHomeDataFetch("new", 0, 4);
 
   return (
     <div>

@@ -2,7 +2,7 @@ import TodayAsk from "../../components/home/TodayAsk";
 import useHomeDataFetch from "../../hooks/useHomeDataFetch";
 
 const TodayAskContainer = () => {
-  const { isLoading, stories } = useHomeDataFetch("ask", 5);
+  const { isLoading, stories } = useHomeDataFetch("ask", 0, 5);
 
   return (
     <div>
