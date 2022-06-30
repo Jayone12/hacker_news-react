@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import getStoryIds from "../utils/homeApi";
+import { getStoryIds } from "../utils/homeApi";
 
 const useHomeDataFetch = (type, start, last) => {
   // 스토리 데이터 저장
