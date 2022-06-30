@@ -4,7 +4,7 @@ import { diffTime } from "../../utils/diffTime";
 const TodayShow = ({ value: { url, title, score, time, by, kids } }) => {
   return (
     <li>
-      <span>{url.replace(/[\w\s]+:\/\/|[\/\-][\w\/]+/gi, "")}</span>
+      <span>{url?.replace(/[\w\s]+:\/\/|[\/\-][\w\/]+/gi, "")}</span>
       <div>
         <span>{title.substring(0, 8)}</span>
         {title.substring(8)}
