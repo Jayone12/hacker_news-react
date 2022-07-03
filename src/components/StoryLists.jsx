@@ -1,12 +1,16 @@
 import { diffTime } from "../utils/diffTime";
 
-const StoryLists = ({ value: { title, by, score, time, kids, url } }) => {
+const StoryLists = ({ value: { title, by, score, time, kids, url, id } }) => {
   return (
     <li>
       <div>
-        <a href={url} target="_blank" rel="noopener noreferrer">
-          {title}
-        </a>
+        {url ? (
+          <a href={url} target="_blank" rel="noopener noreferrer">
+            {title}
+          </a>
+        ) : (
+          <a href={`/detail/${id}`}>{title}</a>
+        )}
       </div>
       <div>
         <div>
