@@ -10,8 +10,11 @@ const useGetDetail = (id) => {
   // 해당 hook이 호출 될때 실행
   useEffect(() => {
     setIsLoading(true);
-    getStory(id).then((story) => setStory(story));
-  }, []); // type 값이 변할때마다 실행된다.
+    getStory(id).then((story) => {
+      setStory(story);
+      setIsLoading(false);
+    });
+  }, []);
 
   return { story, isLoading };
 };
