@@ -3,7 +3,6 @@ import useHomeDataFetch from "../../hooks/useHomeDataFetch";
 
 const TodayTopContainer = () => {
   const { isLoading, stories } = useHomeDataFetch("top", 0, 15);
-  console.log(stories);
 
   return (
     <div>
@@ -15,27 +14,15 @@ const TodayTopContainer = () => {
         </div>
       </div>
       <ul>
-        <li>
-          <ul>
-            {stories.slice(0, 5).map((value, index) => (
-              <TodayTop key={index} index={index + 1} value={value} />
-            ))}
-          </ul>
-        </li>
-        <li>
-          <ul>
-            {stories.slice(5, 10).map((value, index) => (
-              <TodayTop key={index} index={index + 6} value={value} />
-            ))}
-          </ul>
-        </li>
-        <li>
-          <ul>
-            {stories.slice(10, 15).map((value, index) => (
-              <TodayTop key={index} index={index + 11} value={value} />
-            ))}
-          </ul>
-        </li>
+        {stories.slice(0, 5).map((value, index) => (
+          <TodayTop key={index} index={index + 1} value={value} />
+        ))}
+        {stories.slice(5, 10).map((value, index) => (
+          <TodayTop key={index} index={index + 6} value={value} />
+        ))}
+        {stories.slice(10, 15).map((value, index) => (
+          <TodayTop key={index} index={index + 11} value={value} />
+        ))}
       </ul>
     </div>
   );
