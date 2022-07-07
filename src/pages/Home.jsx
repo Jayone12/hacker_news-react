@@ -7,14 +7,14 @@ import TodayShowContainer from "../components/home/TodayShowContainer";
 const Home = () => {
   return (
     <>
+      <img
+        src="/images/home_banner.svg"
+        alt="Use Hacker News! For your Hacker Effect!"
+      />
       <TodayTopContainer />
-      <hr />
       <TodayNewContainer />
-      <hr />
       <TodayShowContainer />
-      <hr />
       <TodayAskContainer />
-      <hr />
       <TodayJobContainer />
     </>
   );

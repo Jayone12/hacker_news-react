@@ -20,9 +20,6 @@ const HederContainer = styled.header`
         display: flex;
         justify-content: space-between;
         align-items: center;
-        li {
-          cursor: pointer;
-        }
         li:last-child {
           margin-left: 11px;
         }
@@ -40,7 +37,6 @@ const HederContainer = styled.header`
         text-align: center;
         font-weight: bold;
         color: #727272;
-        cursor: pointer;
         a {
           width: 100%;
           padding: 10px;
