@@ -4,7 +4,7 @@ import StoryLists from "../components/StoryLists";
 import useHomeDataFetch from "../hooks/useHomeDataFetch";
 import usePagination from "../hooks/usePagination";
 
-const StoryListsContainer = styled.div`
+const StoryListsContainer = styled.ul`
   margin-top: 20px;
   li:not(:first-child) {
     margin-top: 16px;
@@ -23,15 +23,11 @@ const Top = () => {
     <>
       <img src="/images/top_banner.png" alt="Check out the top-!" />
       <StoryListsContainer className="inner__wrapper">
-        <ul>
-          {stories.map((value) => (
-            <StoryLists value={value} key={value.id} />
-          ))}
-        </ul>
-        <div>
-          <Pagination page={page} setPage={setPage} />
-        </div>
+        {stories.map((value) => (
+          <StoryLists value={value} key={value.id} />
+        ))}
       </StoryListsContainer>
+      <Pagination page={page} setPage={setPage} />
     </>
   );
 };
